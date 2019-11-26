@@ -1,0 +1,8 @@
+viewMarks
+Shows a user actor checking their mark on an assigment. Assignment marks are stored in their own table. An assignment mark is an attribute on the many-many relationship between the assignment table and the student table. This is the main use case. There are no alternative use cases.
+
+ViewNotification
+Shows a user actor checking their notifications. This is done by clicking the notification button, which appears on most pages, similarly to D2L. Notifications are stored in a notification table. Rather than keeping track of which notifications are read/unread, each student has a hasNotification flag. If the user has any unread notifications, the flag will be set. This is the same as the way D2L does it. This is the main use case. There are no alternative use cases.
+
+PostCourseInfo
+Shows a professor actor adding course info to a course. This can be viewed by a user, as laid out in the ViewCourseInfo use case. Each course info is stored in a row of the courseInfo table. The course table has a 1-many relationship with the courseInfo table. This is because a course can have many course infos. This is the main use case. It is possible that the professor could type course info that exceeds the length of the column. In this case, an error message would be displayed and the professor would have the option of changing the text.
