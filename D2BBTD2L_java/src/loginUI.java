@@ -1,3 +1,4 @@
+
 import java.sql.SQLException;
 
 import javafx.event.ActionEvent;
@@ -55,8 +56,21 @@ public class loginUI {
 	public void displayLoginForm(Stage stg) {
 		stg.setScene(setUpLoginScene());
 		stg.show();
+
+import javafx.stage.Stage;
+
+public class loginUI 
+{
+	private Boolean loginSuccessful;
+	
+	private Account user;
+
+	public void displayLoginForm(Stage stg) 
+	{
+
 		
 	}
+
 
 
 	public boolean checkCredentials() {
@@ -78,15 +92,27 @@ public class loginUI {
 		
 		LoginControl.getCurrentUser
 		
+
+	public void enterCredentials() 
+	{
+		
+	}
+
+	public void displayLoginConfirmation() 
+	{
+
 		//Set the account here once they've logged in along with other things by calling setUserMainMenu and passing it the id of the user who just logged in
 		//Thanks Logan
 	}
 	
+
 	private void processLoginButtonPress(ActionEvent event)
 	{
 		checkCredentials();
 	}
 	
+
+
 	public void setUserMainMenu(Account user)
 	{
 		MainMenu.setUser(user);
