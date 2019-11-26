@@ -4,18 +4,10 @@ create table AccountType (
   primary key(accountTypeId) 
 );
 insert into AccountType (accountTypeName)
-
-values ('student'),
-	   ('administration'),
-       ('TA'),
-       ('professor');
-
-
   values ('student'),
   ('administration'),
   ('TA'),
   ('professor');
-
 
 create table Account (
   accountId int auto_increment,
@@ -27,19 +19,11 @@ create table Account (
   primary key(accountId),
   foreign key(accountType) references AccountType(accountTypeId)
 );
-
-insert into Account (username,password,accountType,firstName,lastName)
-values ('root',sha1('password'),'root','root');
-
-create table Course (
-  courseId int,
-
 insert into Account (username, password, accountType, firstName, lastName)
 values ('root',sha1('password'), 2, 'root', 'root');
 
 create table Course (
   courseId int AUTO_INCREMENT,
-
   courseNumber varchar(10) unique not null,
   courseDescription text not null,
   primary key(courseId)
@@ -131,13 +115,9 @@ CREATE TABLE AssignmentSubmission
     feedbackRead BOOLEAN NOT NULL DEFAULT FALSE,
     accountId INT NOT NULL,
     assignmentId INT NOT NULL,
-
-    submissionFile BLOB,
-
     grade int default null,
     submissionFile BLOB,
     check (grade >=0 and grade <=100),
-
     PRIMARY KEY (assignmentSubmissionId),
     FOREIGN KEY (assignmentId) REFERENCES Assignment(assignmentId),
     FOREIGN KEY (accountId) REFERENCES StudentAccount(accountId)

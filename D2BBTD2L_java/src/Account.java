@@ -1,4 +1,3 @@
-
 import java.util.Set;
 
 /** 
@@ -7,43 +6,27 @@ import java.util.Set;
 * @author bcouturi
 * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 */
-
-public class Account {
-
 public class Account 
 {
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private Object accountId;
-
 	private int accountId;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private Object username;
-
 	private String username;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private Object password;
-
 	private String password;
 	
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
@@ -85,11 +68,7 @@ public class Account
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private Object accountType;
-
 	private int accountType;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
@@ -107,21 +86,13 @@ public class Account
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private Object firstName;
-
 	private String firstName;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private Object lastName;
-
 	private String lastName;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
@@ -146,7 +117,6 @@ public class Account
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
 	private AccountType accountType2;
-
 	
 	/**
 	 * This constructor is not used to make a new user, it is to make an object out of an existing user. It is used by the DataManager's getAllAccounts method
@@ -212,7 +182,6 @@ public class Account
 		return firstName + " " + lastName;
 	}
 
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
@@ -260,13 +229,9 @@ public class Account
 
 		// end-user-code
 	}
-
-}
-
 	
 	public String toString()
 	{
 		return lastName + ", " + firstName;
 	}
 }
-

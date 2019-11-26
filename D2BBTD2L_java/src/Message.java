@@ -1,4 +1,5 @@
 
+
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
@@ -178,6 +179,5 @@ public class Message
 	public String getSentDescription()
 	{
 		return sentDescription.get();
-
 	}
 }

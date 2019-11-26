@@ -7,38 +7,16 @@
 //import static CourseOfferingInfoObject.*;
 //import static notificationObject.*;
 import java.sql.*;
-
-import java.util.Set;
-
-/** 
-* <!-- begin-UML-doc -->
-* <!-- end-UML-doc -->
-* @author bcouturi
-* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-
 import java.util.*;
 /** 
 * <!-- begin-UML-doc -->
 * <!-- end-UML-doc -->
 * @author Brennan Couturier
-
 */
 public class DataManager {
 	
 	Connection connection = null;
-
-	/*
-	 * Put your prepared statements here
-	 * PreparedStatement example1;
-	 * PreparedStatement example2;
-	 */
 	
-	/*
-	 * Put your query strings here
-	 * String example1Query = "select * from table;"; 
-	 * String example2Query = "select * from 
-	 */
-
 	
 	/**
 	 * This is the DataManager constructor that forms a connection to the cs204301ateam2 database
@@ -92,15 +70,6 @@ public class DataManager {
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
 	private Notification notification;
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	private Message message;
-
-
 
 	/** 
 	* <!-- begin-UML-doc -->
@@ -173,109 +142,36 @@ public class DataManager {
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private Account account5(string uname, string UserPassword);
-	Acount account = new Account();
-	try {
-		Statement st = connection.createStatement();
-		String query = "SELECT*FROM CustomerAccount WHERE username = '"+uname+"'AND password = sha1('"+UserPassword+"');";
-		ResultSet rs = st.executeQuery(query);
-		while(rs.next()) {
-			account.accountId = rs.getString(1);
-			account.username = rs.getString(2);
-			account.password = rs.getString(3);
-			account.accountType = rs.getString(4);
-			account.firstName = rs.getString(5);
-			account.lastName = rs.getString(6);
-		}
-	} catch (SQLException e) {
-		System.err.println(e.getMessage());
-		return null;
-	}
-	return Account;
-}
-	private CourseOfferingInfo courseOfferingInfo2;
-
 	private Account account5;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private AdminAccount adminAccount2;
-
 	private CourseOfferingInfo courseOfferingInfo2;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private ProfessorAccount professorAccount2;
-
 	private AdminAccount adminAccount2;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private TA_Account tA_Account;
-
 	private ProfessorAccount professorAccount2;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	private StudentAccount studentAccount;
-
-
 	private TA_Account tA_Account;
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	public void handleMessageSubmit() {
-		// begin-user-code
-		// TODO Auto-generated method stub
-
-		// end-user-code
-	}
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public void requestMessages() {
-		// begin-user-code
-		// TODO Auto-generated method stub
-
-		// end-user-code
-	}
-
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public void handleCreateStudent() {
-		// begin-user-code
-		// TODO Auto-generated method stub
-
-		// end-user-code
-	}
-
-
 	private StudentAccount studentAccount;
 	
 	public Account getAccountFromId(int idIn) throws SQLException
@@ -644,19 +540,11 @@ public class DataManager {
 		}
 	}
 	
-
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	public void handleCreateTA() {
-		// begin-user-code
-		// TODO Auto-generated method stub
-
-		// end-user-code
-
 	public void handleCreateTA(TA_Account ta) {
 		try {
 			Statement stmt = connection.createStatement();
@@ -666,7 +554,6 @@ public class DataManager {
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 		}
-
 	}
 
 	/** 
@@ -674,13 +561,6 @@ public class DataManager {
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	public void handleCreateProf() {
-		// begin-user-code
-		// TODO Auto-generated method stub
-
-		// end-user-code
-
 	public void handleCreateProf(ProfessorAccount profAc) {
 		try {
 			Statement stmt = connection.createStatement();
@@ -690,7 +570,6 @@ public class DataManager {
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 		}
-
 	}
 
 	/** 
@@ -698,13 +577,6 @@ public class DataManager {
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-
-	public void handleCreateAdmin() {
-		// begin-user-code
-		// TODO Auto-generated method stub
-
-		// end-user-code
-
 	public void handleCreateAdmin(AdminAccount adminAc) {
 		try {
 			Statement stmt = connection.createStatement();
@@ -714,7 +586,6 @@ public class DataManager {
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 		}
-
 	}
 
 	/** 

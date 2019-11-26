@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/home1/ugrads/bcouturi/Jubre/D2BBTD2L/.metadata/.plugins/org.eclipse.jdt.core
-1497011807.index
-2443130588.index
