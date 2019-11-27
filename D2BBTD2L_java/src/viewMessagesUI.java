@@ -246,6 +246,7 @@ public class viewMessagesUI
 		lblName.setText(m.getFromAccount().getFullName());
 		
 		//lblDate.setText(string);
+		//	lblDate.setText(string);
 	}
 
 	public void resetToViewMessagesUI()

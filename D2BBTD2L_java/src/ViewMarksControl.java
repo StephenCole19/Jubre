@@ -5,10 +5,12 @@
 /** 
  * <!-- begin-UML-doc -->
  * <!-- end-UML-doc -->
- * @author bcouturi
+ * @author sdownwar
  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
  */
-public class viewMarksControl {
+import java.util.Date;
+
+public class ViewMarksControl {
 	/** 
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
@@ -16,16 +18,14 @@ public class viewMarksControl {
 	*/
 	private DataManager dataManager;
 
-	/** 
-	* <!-- begin-UML-doc -->
-	* <!-- end-UML-doc -->
-	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-	*/
-	public void getMarks() {
-		// begin-user-code
-		// TODO Auto-generated method stub
+	public ViewMarksControl(DataManager dm)
+	{
+		dataManager = dm;
+	}
 
-		// end-user-code
+	public AssignmentSubmission[] getAssSubs()
+	{
+		return dataManager.getAssSubs();
 	}
 
 	/** 
