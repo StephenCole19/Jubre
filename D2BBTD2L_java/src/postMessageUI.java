@@ -215,7 +215,7 @@ public class postMessageUI
 			to_id = cbAvailableRecipients.getValue().getAccountId();
 		}
 
-		if (!errorMessage.isEmpty() && messageText.length() < 2500)
+		if (!errorMessage.isEmpty() && messageText.length() < 65000)
 		{
 			displayErrorMessage(errorMessage);
 		}

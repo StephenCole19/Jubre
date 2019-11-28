@@ -67,7 +67,7 @@ public class ProfMainMenu
 		
 		btnPostAssignment = new Button("New Assignment");
 		btnPostAssignment.setOnAction(this::processNewAssignmentButtonPress);
-		btnPostAssignment.setPrefWidth(100);
+		btnPostAssignment.setPrefWidth(150);
 		
 		btnLogout = new Button("Logout");
 		btnLogout.setOnAction(this::processLogoutButtonPress);
@@ -75,7 +75,7 @@ public class ProfMainMenu
 		
 		btnViewMessages = new Button("Messages");
 		btnViewMessages.setOnAction(this::processViewMessageButtonPress);
-		btnViewMessages.setPrefWidth(90);
+		btnViewMessages.setPrefWidth(100);
 		
 		btnAssignments = new Button("Assignments");
 		btnAssignments.setOnAction(this::processAssignmentsButtonPress);
@@ -102,13 +102,13 @@ public class ProfMainMenu
 		initMainMenuComponents();
 
 		//Col, row
-		mainPane.add(btnPostAssignment, 6, 3);
+		mainPane.add(btnPostAssignment, 5, 3);
 		mainPane.add(btnLogout, 7, 0);
 		mainPane.add(btnQuit, 7, 3);
-		mainPane.add(btnViewMessages, 2, 3);
-		mainPane.add(btnPostNotification, 4, 3);
-		mainPane.add(btnNotifications, 3, 3);
-		mainPane.add(btnAssignments, 5, 3);
+		mainPane.add(btnViewMessages, 1, 3);
+		mainPane.add(btnPostNotification, 3, 3);
+		mainPane.add(btnNotifications, 2, 3);
+		mainPane.add(btnAssignments, 4, 3);
 		mainPane.add(lblWelcome, 2, 1, 5, 1);
 		mainPane.add(mainMenuIconView, 1, 0);
 		mainPane.add(mainMenuLogoView, 2, 7, 5, 5);
