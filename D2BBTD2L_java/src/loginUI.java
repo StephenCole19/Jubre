@@ -113,6 +113,7 @@ public class loginUI
 		loginPane.setHgap(20);
 		loginPane.setVgap(20);
 		loginPane.setAlignment(Pos.CENTER);
+		
 	}
 	
 	private Scene initLogin()
