@@ -625,9 +625,6 @@ public class DataManager{
 			
 		} catch (SQLException e) {
 			System.err.println("SQL error: Assignment not found");
-		}
-		return assignmentList;
-	}
   
   public ArrayList<String> requestCourseNames(){
 		ArrayList<String> courseList = new ArrayList<String>();

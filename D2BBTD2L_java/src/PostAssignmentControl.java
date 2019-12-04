@@ -40,10 +40,13 @@ public class PostAssignmentControl {
 			
 		} catch (FileNotFoundException e) {
 			success = false;
+			System.out.print("FNF");
 		} catch (IOException e) {
 			success = false;
+			System.out.println("IO");
 		} catch (SQLException e) {
 			success = false;
+			System.out.println("SQL");
 		}
 		
 		

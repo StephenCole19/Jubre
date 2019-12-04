@@ -33,8 +33,11 @@ public class ViewAssignmentControl {
 			fos.close();
 			rbc.close();		
 		} catch (FileNotFoundException e) {
+			System.out.println("NO FILE");
 		} catch (IOException e) {
+			System.out.println("IO Except");
 		} catch (SQLException e) {
+			System.out.println("SQL");
 		}
 	}
 
