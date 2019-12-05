@@ -654,7 +654,8 @@ public class DataManager{
 		ArrayList<AssignmentSubmission> arr = new ArrayList<AssignmentSubmission>();
 		try
 		{
-			ps = connection.prepareStatement("SELECT * FROM AssignmentSubmission t1 JOIN Assignment t2 ON t1.assignmentId = t2.assignmentId");
+			ps = connection.prepareStatement("SELECT * FROM AssignmentSubmission t1 JOIN Assignment t2 ON t1.assignmentId = t2.assignmentId WHERE t1.accountId = ?");
+            ps.setInt(1, MainMenu.getUserId());
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next())
